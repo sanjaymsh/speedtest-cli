@@ -17,31 +17,79 @@ matrix:
   include:
     - python: 2.7
       env: TOXENV=flake8
+      arch: amd64
     - python: 2.7
       env: TOXENV=py24
+      arch: amd64
     - python: 2.7
       env: TOXENV=py25
+      arch: amd64
     - python: 2.7
       env: TOXENV=py26
+      arch: amd64
     - python: 2.7
       env: TOXENV=py27
+      arch: amd64
     - python: 2.7
       env: TOXENV=py32
+      arch: amd64
     - python: 2.7
       env: TOXENV=py33
+      arch: amd64
     - python: 3.4
       env: TOXENV=py34
+      arch: amd64
     - python: 3.5
       env: TOXENV=py35
+      arch: amd64
     - python: 3.6
       env: TOXENV=py36
+      arch: amd64
     - python: 3.7
       env: TOXENV=py37
+      arch: amd64
     - python: 3.8-dev
       env: TOXENV=py38
+      arch: amd64
     - python: pypy
       env: TOXENV=pypy
       dist: trusty
+      arch: amd64
+    - python: 2.7
+      env: TOXENV=flake8
+      arch: ppc64le
+    - python: 2.7
+      env: TOXENV=py24
+      arch: ppc64le
+    - python: 2.7
+      env: TOXENV=py25
+      arch: ppc64le
+    - python: 2.7
+      env: TOXENV=py26
+      arch: ppc64le
+    - python: 2.7
+      env: TOXENV=py27
+      arch: ppc64le
+    - python: 2.7
+      env: TOXENV=py32
+      arch: ppc64le
+    - python: 2.7
+      env: TOXENV=py33
+      arch: ppc64le
+    - python: 3.4
+      env: TOXENV=py34
+      arch: ppc64le
+    - python: 3.5
+      env: TOXENV=py35
+      arch: ppc64le
+    - python: 3.6
+      env: TOXENV=py36
+      arch: ppc64le
+    - python: 3.7
+      env: TOXENV=py37
+      arch: ppc64le
+    - python: 3.8-dev
+      env: TOXENV=py38
 
 before_install:
   - if [[ $(echo "$TOXENV" | egrep -c "py35") != 0 ]]; then pyenv global system 3.5; fi;
